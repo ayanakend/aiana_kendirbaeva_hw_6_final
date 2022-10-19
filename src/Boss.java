@@ -1,9 +1,11 @@
 public class Boss extends GameEntity {
-    private Weapon weapon;
-    public Boss(int health, int damage , Weapon weapon) {
+
+    public Boss(int health, int damage, Weapon weapon) {
         super(health, damage);
         this.weapon = weapon;
     }
+
+    private Weapon weapon;
     public Weapon getWeapon() {
         return weapon;
     }
@@ -12,6 +14,6 @@ public class Boss extends GameEntity {
     }
     @Override
     public void printInfo() {
-        System.err.println( "Название оружие: "+getWeapon().getNameWeapon() + ", Тип оружия: " + getWeapon().getTypeWeapon() + ", Жизнь: " + getHealth() + ", Урон: " + getDamage());
+        System.out.println( "Название оружие: "+getWeapon().getNameWeapon() + ", Тип оружия: " + getWeapon().getWeaponTypeEnum() + ", Жизнь: " + getHealth() + ", Урон: " + getDamage());
     }
 }

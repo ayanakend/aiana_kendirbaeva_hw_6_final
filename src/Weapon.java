@@ -1,16 +1,11 @@
 public class Weapon {
-    private String typeWeapon , nameWeapon;
 
-    public String getTypeWeapon() {
-        return typeWeapon;
-    }
+    private Enum<Main.WeaponType> weaponTypeEnum;
 
-    public void setTypeWeapon(String typeWeapon) {
-        this.typeWeapon = typeWeapon;
-    }
+    private String nameWeapon;
 
-    public Weapon(String typeWeapon, String nameWeapon) {
-        this.typeWeapon = typeWeapon;
+    public Weapon(Enum<Main.WeaponType> weaponTypeEnum, String nameWeapon) {
+        this.weaponTypeEnum = weaponTypeEnum;
         this.nameWeapon = nameWeapon;
     }
 
@@ -20,5 +15,13 @@ public class Weapon {
 
     public void setNameWeapon(String nameWeapon) {
         this.nameWeapon = nameWeapon;
+    }
+
+    public Enum<Main.WeaponType> getWeaponTypeEnum() {
+        return weaponTypeEnum;
+    }
+
+    public void setWeaponTypeEnum(Enum<Main.WeaponType> weaponTypeEnum) {
+        this.weaponTypeEnum = weaponTypeEnum;
     }
 }

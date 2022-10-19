@@ -2,15 +2,19 @@ public class Main {
 
     enum WeaponType {
         GUN,
-        SWORD,
-        BOMB
+        MAGIC,
+        COLD;
     }
 
+    Weapon weaponArrows;
+
     public static void main(String[] args) {
-        Boss boss = new Boss( 500 , 100 , new Weapon("Sword", "Katana"));
+        Weapon weapon = new Weapon(WeaponType.GUN, "Fire gun");
+        Weapon arrows = new Weapon(WeaponType.MAGIC, "Fire arrows");
+        Boss boss = new Boss(400, 50, weapon);
         boss.printInfo();
-        Sceleton skeleton =new Sceleton(300,55,new Weapon("Gun","Fire Gun"));
-        skeleton.printInfo();
+        Sceleton skeleton =new Sceleton(300,55, arrows, 10);
+         skeleton.printInfo();
 
     }
 }

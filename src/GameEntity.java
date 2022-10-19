@@ -1,6 +1,11 @@
 public class GameEntity implements PrintInfo {
-    private int health , damage;
+    public GameEntity(int health, int damage) {
+        this.health = health;
+        this.damage = damage;
+    }
 
+    private int health;
+    private int damage;
     public int getHealth() {
         return health;
     }
@@ -14,11 +19,6 @@ public class GameEntity implements PrintInfo {
     }
 
     public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    public GameEntity(int health, int damage) {
-        this.health = health;
         this.damage = damage;
     }
 

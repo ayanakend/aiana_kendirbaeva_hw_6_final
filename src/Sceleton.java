@@ -1,9 +1,14 @@
 public class Sceleton extends Boss  {
-    public Sceleton(int health, int damage, Weapon weapon) {
+
+    private int arrows;
+
+    public Sceleton(int health, int damage, Weapon weapon, int arrows) {
         super(health, damage, weapon);
+        this.arrows = arrows;
     }
+
     @Override
     public void printInfo() {
-        System.err.println( "Название оружия: "+ getWeapon().getNameWeapon() + ", Тип оружия: " + getWeapon().getTypeWeapon() + ", Жизнь: " + getHealth() + ", Урон: " + getDamage());
+        System.out.println( "Название оружия: "+ getWeapon().getNameWeapon() + ", Тип оружия: " + getWeapon().getNameWeapon() + ", Жизнь: " + getHealth() + ", Урон: " + getDamage() + ", Стрелы: " + arrows);
     }
 }
